@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ElementosQuimicos</title>
+</head>
+<body>
+<h1>Lista de Elementos Quimicos</h1>
+<hr>
+
+<table>
+    <thead>
+    <tr>
+        <th> Nome</th>
+        <th> Sigla </th>
+        <th> Tipo </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="elementosQuimicos:${elementosQuimicos}">
+        <td th:text="${elementosQuimicos.nome}"></td>
+        <td th:text="${elementosQuimicos.sigla}"></td>
+        <td th:text="${elementosQuimicos.tipo}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
